@@ -1,0 +1,18 @@
+aws-2nd-factor:
+  # TMP credentials storage
+  # default: os.tmpdir() + '/.2nd-aws-credentials.tmp'
+  tmpFile: /.cred-files.tmp
+  # Base profile. We use this profile to login with MFA
+  baseProfile: cf
+  # Profile to be assumed
+  localProfile: cf-dev
+  # Session time (minutes)
+  maxTime: 43200
+  # MFA serial number. Preferred in env vars
+  mfaSerialNumber: arn:aws:iam::{aws_account}:mfa/{aws_user}
+  # Use plugin (not recommended for cloud environment, only for local)
+  force: false
+  # AWS session prefix
+  sessionPrefix: cfsvl-
+
+

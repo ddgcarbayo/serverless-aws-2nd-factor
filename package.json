@@ -1,6 +1,6 @@
 {
   "name": "serverless-aws-2nd-factor",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Serverless plugin to assume role using MFA ",
   "main": "index.js",
   "scripts": {

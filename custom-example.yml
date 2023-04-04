@@ -1,7 +1,9 @@
 aws-2nd-factor:
   # TMP credentials storage
-  # default: os.tmpdir() + '/.2nd-aws-credentials.tmp'
+  # default: path.join(custom.tmpFolder || os.tmpdir(), `.${this.BASE_PROFILE}-${this.LOCAL_PROFILE}-2nd-aws-credentials.tmp`);
   tmpFile: /.cred-files.tmp
+  # default: os.tmpdir()
+  tmpFolder: .
   # Base profile. We use this profile to login with MFA
   baseProfile: cf
   # Profile to be assumed

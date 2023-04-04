@@ -13,7 +13,7 @@ class ServerlessAWS2ndFactor {
     this.LOCAL_PROFILE = custom.localProfile || 'cf-dev';
     this.BASE_PROFILE = custom.baseProfile || 'cf';
     this.MAX_TIME = custom.maxTime || 3600 * 12;
-    this.TMP_FILE = custom.tmpFile || os.tmpdir() + '/.2nd-aws-credentials.tmp';
+    this.TMP_FILE = custom.tmpFile || path.join(custom.tmpFolder || os.tmpdir(), `.${this.BASE_PROFILE}-${this.LOCAL_PROFILE}-2nd-aws-credentials.tmp`);
     this.SESSION_PREFIX = custom.sessionPrefix || 'cfsvl-';
     this.AWS_MFA_SERIAL_NUMBER = process.env.AWS_MFA_SERIAL_NUMBER || custom.mfaSerialNumber || null;
     this.CF_IS_LOCAL = !!((custom.force === true) || envIsLocal);

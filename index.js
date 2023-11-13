@@ -4,6 +4,8 @@ const os = require('os');
 const AWS = require('aws-sdk');
 const path = require('path');
 
+// TODO mirar esto: https://github.com/alikian/mfa-serverless-plugin/blob/master/index.js
+
 class ServerlessAWS2ndFactor {
   constructor(serverless) {
     this.serverless = serverless;
